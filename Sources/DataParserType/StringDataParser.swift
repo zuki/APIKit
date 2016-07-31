@@ -24,8 +24,16 @@ public class StringDataParser: DataParserType {
     /// Return `String` that converted from `NSData`.
     /// - Throws: `StringDataParser.Error` when the parser fails to initialize `NSString` from `NSData`.
     public func parseData(data: NSData) throws -> AnyObject {
-        guard let string = NSString(data: data, encoding: encoding) else {
+        if let string = NSString(data: data, encoding: encoding) {
+            return string
+        }
+
+        guard let cleanData = data.cleanUTF8() else {
             throw Error.InvalidData(data)
+        }
+
+        guard let string = NSString(data: cleanData, encoding: encoding) else {
+            throw Error.InvalidData(cleanData)
         }
 
         return string
