@@ -11,9 +11,8 @@
 		141F12321C1C9AC70026D415 /* OHHTTPStubs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD51152D1B1FFCC700514240 /* OHHTTPStubs.framework */; };
 		141F12361C1C9AC70026D415 /* Result.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = CD5115241B1FFBA900514240 /* Result.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		141F12371C1C9AC70026D415 /* OHHTTPStubs.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = CD51152D1B1FFCC700514240 /* OHHTTPStubs.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		557544181D52D0C7005D1891 /* NSData+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557544171D52D0C7005D1891 /* NSData+Extension.swift */; };
 		557E7F611D4DC98F00EC63F0 /* libiconv.2.4.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 557E7F601D4DC98F00EC63F0 /* libiconv.2.4.0.tbd */; };
-		557E7F661D4DCA1600EC63F0 /* NSData+CUTF8.h in Headers */ = {isa = PBXBuildFile; fileRef = 557E7F641D4DCA1600EC63F0 /* NSData+CUTF8.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		557E7F671D4DCA1600EC63F0 /* NSData+CUTF8.m in Sources */ = {isa = PBXBuildFile; fileRef = 557E7F651D4DCA1600EC63F0 /* NSData+CUTF8.m */; };
 		55F3CE861D4DCCA70097BE7C /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55F3CE851D4DCCA70097BE7C /* Result.framework */; };
 		7F09BF931C8AE8DB00F4A59A /* RequestTypeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F09BF8D1C8AE8DB00F4A59A /* RequestTypeTests.swift */; };
 		7F10D8EE1CD5CF8D00722F66 /* CallbackQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F10D8ED1CD5CF8D00722F66 /* CallbackQueue.swift */; };
@@ -88,9 +87,8 @@
 		141F123C1C1C9AC70026D415 /* APIKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = APIKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		141F123F1C1C9EA30026D415 /* APIKit.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = APIKit.xcconfig; path = Configurations/APIKit.xcconfig; sourceTree = "<group>"; };
 		141F12401C1C9EA30026D415 /* Tests.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = Tests.xcconfig; path = Configurations/Tests.xcconfig; sourceTree = "<group>"; };
+		557544171D52D0C7005D1891 /* NSData+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSData+Extension.swift"; sourceTree = "<group>"; };
 		557E7F601D4DC98F00EC63F0 /* libiconv.2.4.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.2.4.0.tbd; path = usr/lib/libiconv.2.4.0.tbd; sourceTree = SDKROOT; };
-		557E7F641D4DCA1600EC63F0 /* NSData+CUTF8.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+CUTF8.h"; sourceTree = "<group>"; };
-		557E7F651D4DCA1600EC63F0 /* NSData+CUTF8.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+CUTF8.m"; sourceTree = "<group>"; };
 		55F3CE851D4DCCA70097BE7C /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
 		7F09BF8B1C8AE8DB00F4A59A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7F09BF8D1C8AE8DB00F4A59A /* RequestTypeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestTypeTests.swift; sourceTree = "<group>"; };
@@ -174,8 +172,7 @@
 		557E7F631D4DC9E900EC63F0 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				557E7F641D4DCA1600EC63F0 /* NSData+CUTF8.h */,
-				557E7F651D4DCA1600EC63F0 /* NSData+CUTF8.m */,
+				557544171D52D0C7005D1891 /* NSData+Extension.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -362,7 +359,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				557E7F661D4DCA1600EC63F0 /* NSData+CUTF8.h in Headers */,
 				7F7E8F151C8AD4B1008A13A9 /* APIKit.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -486,7 +482,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				7F7E8F1A1C8AD4B1008A13A9 /* RequestType.swift in Sources */,
-				557E7F671D4DCA1600EC63F0 /* NSData+CUTF8.m in Sources */,
 				7FA19A331C985CEC005D25AE /* MultipartFormDataBodyParameters.swift in Sources */,
 				7F85FB871C9CF47300CEE132 /* FormURLEncodedDataParser.swift in Sources */,
 				7FA19A431C9CBF2A005D25AE /* SessionTaskError.swift in Sources */,
@@ -495,6 +490,7 @@
 				7F2A15BD1CEB5F67009A12A2 /* NSData+NSInputStream.swift in Sources */,
 				7FAC40341C8F2C900098C4B2 /* Box.swift in Sources */,
 				7FB650DF1CEA0E6B00366992 /* StringDataParser.swift in Sources */,
+				557544181D52D0C7005D1891 /* NSData+Extension.swift in Sources */,
 				7F18BD131C972E5A003A31DF /* FormURLEncodedBodyParameters.swift in Sources */,
 				7FA19A461C9CC9D0005D25AE /* DataParserType.swift in Sources */,
 				7F18BD111C972C69003A31DF /* JSONBodyParameters.swift in Sources */,
